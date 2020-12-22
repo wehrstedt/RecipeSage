@@ -29,7 +29,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content #contentContainer>
+<div style="position: relative; flex: 1; flex-flow: column; display: flex;">
   <ion-searchbar
     *ngIf="folder === 'main'"
     (ionClear)="search('')"
@@ -46,12 +46,12 @@
   </div>
 
   <virtual-scroller
+    style="flex: 1"
     *ngIf="preferences[preferenceKeys.ViewType] === 'tiles'"
     #scroll
     bufferAmount="5"
     (vsEnd)="fetchMoreRecipes($event)"
     [items]="recipes"
-    [parentScroll]="scrollElement"
     [enableUnequalChildrenSizes]="true">
 
     <div #container class="card-container">
@@ -93,7 +93,6 @@
     bufferAmount="5"
     (vsEnd)="fetchMoreRecipes($event)"
     [items]="recipes"
-    [parentScroll]="scrollElement"
     [enableUnequalChildrenSizes]="true">
 
     <div #container>
@@ -124,60 +123,58 @@
     </div>
   </virtual-scroller>
 
-  <ion-list *ngIf="!loading">
-    <null-state *ngIf="folder === 'main' && (!recipes || recipes.length === 0) && searchText.length === 0 && totalRecipeCount == 0 && selectedLabels.length === 0">
-      <logo-icon href="/#/about" virtualSlot="header"></logo-icon>
-      <ion-label virtualSlot="body">
-        <h2>Welcome to RecipeSage!</h2>
-        <br /><br />
-        <p>
-          This is where your recipes will appear.<br />
-          It looks like you don't have any recipes yet.<br />
-          <b>Click the + button in the bottom right corner to add one!</b><br />
+  <null-state *ngIf="!loading && folder === 'main' && (!recipes || recipes.length === 0) && searchText.length === 0 && totalRecipeCount == 0 && selectedLabels.length === 0">
+    <logo-icon href="/#/about" virtualSlot="header"></logo-icon>
+    <ion-label virtualSlot="body">
+      <h2>Welcome to RecipeSage!</h2>
+      <br /><br />
+      <p>
+      This is where your recipes will appear.<br />
+      It looks like you don't have any recipes yet.<br />
+      <b>Click the + button in the bottom right corner to add one!</b><br />
 
-          <br /><br />
+      <br /><br />
 
-          You can also import recipes!<br />
-          Use the side menu to go to settings -> import
+      You can also import recipes!<br />
+      Use the side menu to go to settings -> import
 
-          <br /><br />
+      <br /><br />
 
-          For desktop browsers, you can use our<br />
-          <a href="https://chrome.google.com/webstore/detail/oepplnnfceidfaaacjpdpobnjkcpgcpo" target="_blank">Chrome</a>
-          &
-          <a href="https://addons.mozilla.org/en-US/firefox/addon/recipesage/" target="_blank">Firefox</a>
-          extensions to clip recipes from the web<br />
+      For desktop browsers, you can use our<br />
+      <a href="https://chrome.google.com/webstore/detail/oepplnnfceidfaaacjpdpobnjkcpgcpo" target="_blank">Chrome</a>
+      &
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/recipesage/" target="_blank">Firefox</a>
+      extensions to clip recipes from the web<br />
 
-          <br /><br />
+      <br /><br />
 
-          See the <a href="/#/tips-tricks-tutorials">Tips Tricks & Tutorials page</a> for detailed how-tos
-        </p>
-      </ion-label>
-    </null-state>
-    <null-state *ngIf="folder === 'inbox' && (!recipes || recipes.length === 0) && searchText.length === 0 && totalRecipeCount == 0">
-      <ion-icon name="mail-open" class="big-icon" virtualSlot="header"></ion-icon>
-      <ion-label virtualSlot="body">
-        <p>
-          Your recipe inbox is empty.<br />
-          When someone sends you a recipe, it will show up here!
-        </p>
-      </ion-label>
-    </null-state>
-    <null-state *ngIf="recipes && recipes.length === 0 && searchText.length > 0">
-      <ion-icon name="search" class="big-icon" virtualSlot="header"></ion-icon>
-      <ion-label virtualSlot="body">
-        <p>
-          No search results.<br /><br />
-          Search includes:<br />
-          Title, description, source, ingredients, instructions, and notes.
-        </p>
-      </ion-label>
-    </null-state>
-  </ion-list>
+      See the <a href="/#/tips-tricks-tutorials">Tips Tricks & Tutorials page</a> for detailed how-tos
+      </p>
+    </ion-label>
+  </null-state>
+  <null-state *ngIf="!loading && folder === 'inbox' && (!recipes || recipes.length === 0) && searchText.length === 0 && totalRecipeCount == 0">
+    <ion-icon name="mail-open" class="big-icon" virtualSlot="header"></ion-icon>
+    <ion-label virtualSlot="body">
+      <p>
+        Your recipe inbox is empty.<br />
+        When someone sends you a recipe, it will show up here!
+      </p>
+    </ion-label>
+  </null-state>
+  <null-state *ngIf="!loading && recipes && recipes.length === 0 && searchText.length > 0">
+    <ion-icon name="search" class="big-icon" virtualSlot="header"></ion-icon>
+    <ion-label virtualSlot="body">
+      <p>
+        No search results.<br /><br />
+        Search includes:<br />
+        Title, description, source, ingredients, instructions, and notes.
+      </p>
+    </ion-label>
+  </null-state>
 
   <ion-fab *ngIf="folder !== 'inbox'" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="newRecipe()" color="primary">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-</ion-content>
+</div>

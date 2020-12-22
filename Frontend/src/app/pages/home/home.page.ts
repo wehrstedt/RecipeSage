@@ -111,7 +111,7 @@ export class HomePage implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.getScrollElement();
+    //this.getScrollElement();
   }
 
   ionViewWillEnter() {
