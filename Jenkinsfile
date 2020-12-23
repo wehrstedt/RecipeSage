@@ -10,9 +10,10 @@ pipeline {
   stages {
     stage('Install Deps') {
       steps {
-        sh "cd Backend && npm install"
-        sh "cd Frontend && npm install"
-        sh "cd SharedUtils && npm install"
+        echo "hi"
+        /*sh "cd Backend && npm install"*/
+        /*sh "cd Frontend && npm install"*/
+        /*sh "cd SharedUtils && npm install"*/
       }
     }
     stage('Test Backend') {
