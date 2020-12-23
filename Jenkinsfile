@@ -22,7 +22,14 @@ pipeline {
     }
     stage('Test Backend') {
       steps {
-        sh "cd Backend && npm run test:ci"
+        script {
+          docker.image('postgres:9.6.9').withRun('-e "POSTGRES_USER=chefbook" -e "POSTGRES_PASSWORD=admin" -e "POSTGRES_DB=chefbook_test" -p 5432:5432') { c ->
+            /* Wait until postgres service is up */
+            /*sh 'while ! psql -h 0.0.0.0 -U chefbook -d chefbook_test -c "select 1" > /dev/null 2>&1; do sleep 1; done'*/
+
+            sh "cd Backend && npm run test:ci"
+          }
+        }
       }
     }
     stage('Lint Frontend') {
