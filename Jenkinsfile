@@ -15,9 +15,9 @@ pipeline {
       }
     }
     stage('Application') {
-      agent: {
-        docker: {
-          image: 'node:12'
+      agent {
+        docker {
+          image 'node:12'
         }
       }
       steps {
