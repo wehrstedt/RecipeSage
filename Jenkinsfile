@@ -21,9 +21,7 @@ pipeline {
       }
     }
     stage('Test Backend') {
-      agent {
-        label 'docker'
-      }
+      agent none
       steps {
         script {
           docker.image('postgres:9.6.9').withRun('-e "POSTGRES_USER=chefbook" -e "POSTGRES_PASSWORD=admin" -e "POSTGRES_DB=chefbook_test" -p 5432:5432') { c ->
