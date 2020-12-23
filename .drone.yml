@@ -37,6 +37,7 @@ steps:
       from_secret: AWS_SECRET_ACCESS_KEY
     AWS_DEFAULT_REGION: us-west-2
     AWS_REGION: us-west-2
+    AWS_BUCKET: chefbook-dev
   commands:
   - cd Backend && npm run test:ci
 - name: Push
