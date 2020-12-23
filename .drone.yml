@@ -1,0 +1,33 @@
+kind: pipeline
+name: default
+image: node:12
+
+services:
+- name: postgres
+  image: postgres:9.6.9
+  environment:
+    POSTGRES_USER: chefbook
+    POSTGRES_PASSWORD: admin
+    POSTGRES_DB: chefbook_test
+
+steps:
+- name: Install Dependencies
+  commands:
+  - cd Backend && npm install
+  - cd Frontend && npm install
+  - cd SharedUtils && npm install
+- name: Test Backend
+  environment:
+    NODE_ENV: test
+    VERBOSE: true
+    POSTGRES_DB: chefbook_test
+    POSTGRES_USER: chefbook
+    POSTGRES_PASSWORD: admin
+    POSTGRES_PORT: 5432
+    POSTGRES_HOST: localhost
+    POSTGRES_SSL: false
+    POSTGRES_LOGGING: false
+    GRIP_URL: http://localhost:5561/
+    GRIP_KEY: changeme
+  commands:
+  - cd Backend && npm run test:ci
