@@ -117,6 +117,8 @@ app.use(function(err, req, res, next) {
 
   if (!err.status) err.status = 500;
 
+  console.error(err)
+
   res.locals.error = devMode ? err : {};
 
   logError(err);
