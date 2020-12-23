@@ -12,33 +12,29 @@ pipeline {
     }
     stage('Install Deps') {
       steps {
-        def workspace = pwd()
-        sh "cd ${workspace}/Backend"
+        sh "cd ${WORKSPACE}/Backend"
         sh "npm install"
-        sh "cd ${workspace}/Frontend"
+        sh "cd ${WORKSPACE}/Frontend"
         sh "npm install"
-        sh "cd ${workspace}/SharedUtils"
+        sh "cd ${WORKSPACE}/SharedUtils"
         sh "npm install"
       }
     }
     stage('Test Backend') {
       steps {
-        def workspace = pwd()
-        sh "cd ${workspace}/Backend"
+        sh "cd ${WORKSPACE}/Backend"
         sh "npm run test:ci"
       }
     }
     stage('Lint Frontend') {
       steps {
-        def workspace = pwd()
-        sh "cd ${workspace}/Frontend"
+        sh "cd ${WORKSPACE}/Frontend"
         sh "npm run lint"
       }
     }
     stage('Build Frontend') {
       steps {
-        def workspace = pwd()
-        sh "cd ${workspace}/Frontend"
+        sh "cd ${WORKSPACE}/Frontend"
         sh "npm run dist"
       }
     }
