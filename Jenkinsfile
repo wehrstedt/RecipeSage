@@ -40,7 +40,7 @@ pipeline {
     }
     stage('Push Backend') {
       when {
-        branch: 'master'
+        branch 'master'
         tag '*'
       }
       steps {
@@ -50,7 +50,7 @@ pipeline {
     }
     stage('Push Frontend') {
       when {
-        branch: 'master'
+        branch 'master'
         tag '*'
       }
       steps {
