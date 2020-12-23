@@ -22,20 +22,17 @@ pipeline {
     }
     stage('Test Backend') {
       steps {
-        sh "cd ${WORKSPACE}/Backend"
-        sh "npm run test:ci"
+        sh "cd Backend && npm run test:ci"
       }
     }
     stage('Lint Frontend') {
       steps {
-        sh "cd ${WORKSPACE}/Frontend"
-        sh "npm run lint"
+        sh "cd Frontend && npm run lint"
       }
     }
     stage('Build Frontend') {
       steps {
-        sh "cd ${WORKSPACE}/Frontend"
-        sh "npm run dist"
+        sh "cd Frontend && npm run dist"
       }
     }
     stage('Push Backend') {
@@ -45,7 +42,7 @@ pipeline {
       }
       steps {
         sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
-        sh "./scripts/deploy/push_api_docker.sh $TAG"
+        sh "./scripts/deploy/push_api_docker.sh $TAG_NAME"
       }
     }
     stage('Push Frontend') {
@@ -54,9 +51,12 @@ pipeline {
         tag '*'
       }
       steps {
+        sh script:'''
+          sed -i "s/window.version = 'development';/window.version = '${CIRCLE_TAG}';/" www/index.html
+        '''
         sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
-        sh "./scripts/deploy/push_static_docker.sh $TAG"
-        sh "./scripts/deploy/push_static_s3.sh $TAG"
+        sh "./scripts/deploy/push_static_docker.sh $TAG_NAME"
+        sh "./scripts/deploy/push_static_s3.sh $TAG_NAME"
       }
     }
   }
