@@ -18,7 +18,7 @@ pipeline {
     stage('Test Backend') {
       agent {
         docker {
-          image 'docker'
+          image 'docker:19'
         }
       }
       environment {
