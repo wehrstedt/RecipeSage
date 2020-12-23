@@ -41,7 +41,7 @@ steps:
   commands:
   - cd Backend && npm run test:ci
 - name: Push
-  image: node:12
+  image: docker
   commands:
   - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
   - ./scripts/deploy/push_api_docker.sh $DRONE_TAG
