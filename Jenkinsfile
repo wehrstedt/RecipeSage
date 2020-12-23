@@ -60,7 +60,4 @@ pipeline {
       }
     }
   }
-  environment {
-    example = 'value'
-  }
 }
