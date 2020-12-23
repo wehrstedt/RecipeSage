@@ -36,6 +36,8 @@ steps:
   commands:
   - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
   - ./scripts/deploy/push_api_docker.sh $DRONE_TAG
+  when:
+    ref: [ refs/heads/master, refs/tags/* ]
 
 ---
 
