@@ -2,16 +2,6 @@ kind: pipeline
 name: ci-backend
 
 environment:
-  AWS_ACCESS_KEY_ID:
-    from_secret: AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY:
-    from_secret: AWS_SECRET_ACCESS_KEY
-  AWS_DEFAULT_REGION: us-west-2
-  AWS_REGION: us-west-2
-  DOCKER_USER:
-    from_secret: DOCKER_USER
-  DOCKER_PAT:
-    from_secret: DOCKER_PAT
 
 services:
 - name: postgres
@@ -41,6 +31,12 @@ steps:
     POSTGRES_LOGGING: false
     GRIP_URL: http://localhost:5561/
     GRIP_KEY: changeme
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION: us-west-2
+    AWS_REGION: us-west-2
   commands:
   - cd Backend && npm run test:ci
 - name: Push
@@ -48,6 +44,11 @@ steps:
   commands:
   - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
   - ./scripts/deploy/push_api_docker.sh $DRONE_TAG
+  environment:
+    DOCKER_USER:
+      from_secret: DOCKER_USER
+    DOCKER_PAT:
+      from_secret: DOCKER_PAT
   when:
     ref: [ refs/heads/master, refs/tags/* ]
 
@@ -55,18 +56,6 @@ steps:
 
 kind: pipeline
 name: ci-frontend
-
-environment:
-  AWS_ACCESS_KEY_ID:
-    from_secret: AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY:
-    from_secret: AWS_SECRET_ACCESS_KEY
-  AWS_DEFAULT_REGION: us-west-2
-  AWS_REGION: us-west-2
-  DOCKER_USER:
-    from_secret: DOCKER_USER
-  DOCKER_PAT:
-    from_secret: DOCKER_PAT
 
 steps:
 - name: Install Dependencies
@@ -95,12 +84,22 @@ steps:
   - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
   - ./scripts/deploy/push_static_docker.sh $DRONE_TAG
   environment:
-
+    DOCKER_USER:
+      from_secret: DOCKER_USER
+    DOCKER_PAT:
+      from_secret: DOCKER_PAT
   when:
     ref: [ refs/heads/master, refs/tags/* ]
 - name: Push S3
   image: amazon/aws-cli
   commands:
   - ./scripts/deploy/push_static_s3.sh $DRONE_TAG
+  environment:
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION: us-west-2
+    AWS_REGION: us-west-2
   when:
     ref: [ refs/heads/master, refs/tags/* ]
