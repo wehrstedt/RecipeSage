@@ -39,16 +39,16 @@ pipeline {
       }
     }
     stage('Push Backend') {
-      steps {
-        if (env.TAG) {
+      if (env.TAG) {
+        steps {
           sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
           sh "./scripts/deploy/push_api_docker.sh $TAG"
         }
       }
     }
     stage('Push Frontend') {
-      steps {
-        if (env.TAG) {
+      if (env.TAG) {
+        steps {
           sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
           sh "./scripts/deploy/push_static_docker.sh $TAG"
           sh "./scripts/deploy/push_static_s3.sh $TAG"
