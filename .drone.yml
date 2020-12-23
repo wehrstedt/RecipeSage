@@ -1,6 +1,5 @@
 kind: pipeline
-name: default
-image: node:12
+name: ci
 
 services:
 - name: postgres
@@ -12,11 +11,13 @@ services:
 
 steps:
 - name: Install Dependencies
+  image: node:12
   commands:
   - cd Backend && npm install
   - cd Frontend && npm install
   - cd SharedUtils && npm install
 - name: Test Backend
+  image: node:12
   environment:
     NODE_ENV: test
     VERBOSE: true
