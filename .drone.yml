@@ -13,7 +13,7 @@ steps:
 - name: Install Dependencies
   image: node:12
   commands:
-  - echo pwd
+  - pwd
   - cd Backend && npm install
   - cd Frontend && npm install
   - cd SharedUtils && npm install
