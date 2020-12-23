@@ -13,10 +13,9 @@ steps:
 - name: Install Dependencies
   image: node:12
   commands:
-  - pwd
-  - cd Backend && npm install
-  - cd Frontend && npm install
-  - cd SharedUtils && npm install
+  - cd /drone/src/Backend && npm install
+  - cd /drone/src/Frontend && npm install
+  - cd /drone/src/SharedUtils && npm install
 - name: Test Backend
   image: node:12
   environment:
