@@ -40,10 +40,8 @@ pipeline {
     }
     stage('Push Backend') {
       when {
-        allOf: {
-          branch: 'master'
-          tag '*'
-        }
+        branch: 'master'
+        tag '*'
       }
       steps {
         sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
@@ -52,10 +50,8 @@ pipeline {
     }
     stage('Push Frontend') {
       when {
-        allOf: {
-          branch: 'master'
-          tag '*'
-        }
+        branch: 'master'
+        tag '*'
       }
       steps {
         sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
