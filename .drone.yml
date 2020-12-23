@@ -1,5 +1,5 @@
 kind: pipeline
-name: ci
+name: ci-backend
 
 services:
 - name: postgres
@@ -14,9 +14,8 @@ steps:
   image: node:12
   commands:
   - cd /drone/src/Backend && npm install
-  - cd /drone/src/Frontend && npm install
   - cd /drone/src/SharedUtils && npm install
-- name: Test Backend
+- name: Test
   image: node:12
   environment:
     NODE_ENV: test
@@ -32,3 +31,39 @@ steps:
     GRIP_KEY: changeme
   commands:
   - cd Backend && npm run test:ci
+- name: Push
+  image: node:12
+  commands:
+  - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
+  - ./scripts/deploy/push_api_docker.sh $DRONE_TAG
+
+---
+
+kind: pipeline
+name: ci-frontend
+
+steps:
+- name: Install Dependencies
+  image: node:12
+  commands:
+  - cd /drone/src/Frontend && npm install
+  - cd /drone/src/SharedUtils && npm install
+- name: Lint
+  image: node:12
+  commands:
+  - cd Frontend && npm run lint
+- name: Build
+  image: node:12
+  commands:
+  - cd Frontend && npm run dist
+- name: Push
+  image: node:12
+  commands:
+  - echo "$DOCKER_PAT" | docker login --username $DOCKER_USER --password-stdin
+  - mv Frontend/www www
+  - sed -i "s/window.version = 'development';/window.version = '${DRONE_TAG}';/" www/index.html
+  - ./scripts/deploy/push_static_docker.sh $DRONE_TAG
+  - ./scripts/deploy/push_static_s3.sh $DRONE_TAG
+  when:
+    ref: [ refs/heads/master, refs/tags/* ]
+
