@@ -40,17 +40,17 @@ pipeline {
             }
           }
           environment {
-            NODE_ENV = test
+            NODE_ENV = 'test'
             VERBOSE = true
-            POSTGRES_DB = chefbook_test
-            POSTGRES_USER = chefbook
-            POSTGRES_PASSWORD = admin
+            POSTGRES_DB = 'chefbook_test'
+            POSTGRES_USER = 'chefbook'
+            POSTGRES_PASSWORD = 'admin'
             POSTGRES_PORT = 5432
-            POSTGRES_HOST = db
+            POSTGRES_HOST = 'db'
             POSTGRES_SSL = false
             POSTGRES_LOGGING = false
             GRIP_URL = 'http://localhost:5561/'
-            GRIP_KEY = changeme
+            GRIP_KEY = 'changeme'
           }
           steps {
             script {
