@@ -8,11 +8,6 @@ pipeline {
     HOME = '.'
   }
   stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
-    }
     stage('Install Deps') {
       steps {
         sh "cd Backend && npm install"
