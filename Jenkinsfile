@@ -39,20 +39,28 @@ pipeline {
       }
     }
     stage('Push Backend') {
-      if (env.TAG) {
-        steps {
-          sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
-          sh "./scripts/deploy/push_api_docker.sh $TAG"
+      when {
+        allOf: {
+          branch: 'master'
+          tag '*'
         }
+      }
+      steps {
+        sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
+        sh "./scripts/deploy/push_api_docker.sh $TAG"
       }
     }
     stage('Push Frontend') {
-      if (env.TAG) {
-        steps {
-          sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
-          sh "./scripts/deploy/push_static_docker.sh $TAG"
-          sh "./scripts/deploy/push_static_s3.sh $TAG"
+      when {
+        allOf: {
+          branch: 'master'
+          tag '*'
         }
+      }
+      steps {
+        sh "echo '$DOCKER_PAT' | docker login --username $DOCKER_USER --password-stdin"
+        sh "./scripts/deploy/push_static_docker.sh $TAG"
+        sh "./scripts/deploy/push_static_s3.sh $TAG"
       }
     }
   }
