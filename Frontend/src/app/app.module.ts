@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import * as Sentry from '@sentry/browser';
 
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DefaultPageGuardService } from './services/default-page-guard.service';
@@ -94,7 +95,7 @@ export class SentryErrorHandler extends ErrorHandler {
     IonicModule.forRoot(),
     AppRoutingModule,
     LoadingBarModule,
-    CookingToolbarModule
+    CookingToolbarModule,
   ],
   providers: [
     { provide: ErrorHandler, useClass: SentryErrorHandler },

@@ -1,6 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, AlertController, ToastController, PopoverController } from '@ionic/angular';
+import { IDatasource } from 'ngx-ui-scroll';
 
 import { RecipeService, Recipe } from '@/services/recipe.service';
 import { MessagingService } from '@/services/messaging.service';
@@ -49,6 +50,25 @@ export class HomePage implements AfterViewInit {
   scrollElement;
 
   userId = null;
+
+  datasource: IDatasource = {
+    get: async (index, count, success) => {
+      const { data } = await this.recipeService.fetch({
+        folder: this.folder,
+        userId: this.userId,
+        sortBy: this.preferences[MyRecipesPreferenceKey.SortBy],
+        offset: index,
+        count: count,
+        labelIntersection: this.preferences[MyRecipesPreferenceKey.EnableLabelIntersection],
+        ...(this.selectedLabels.length > 0 ? { labels: this.selectedLabels } : {})
+      });
+      success(data);
+    },
+    settings: {
+      minIndex: 0,
+      startIndex: 0,
+    }
+  };
 
   constructor(
     public navCtrl: NavController,
@@ -301,7 +321,6 @@ export class HomePage implements AfterViewInit {
   }
 
   async getScrollElement() {
-    this.scrollElement = await this.contentContainer.getScrollElement();
   }
 
   newRecipe() {
