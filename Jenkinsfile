@@ -49,7 +49,7 @@ pipeline {
             POSTGRES_HOST = db
             POSTGRES_SSL = false
             POSTGRES_LOGGING = false
-            GRIP_URL = http://localhost:5561/
+            GRIP_URL = 'http://localhost:5561/'
             GRIP_KEY = changeme
           }
           steps {
