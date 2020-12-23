@@ -12,12 +12,9 @@ pipeline {
     }
     stage('Install Deps') {
       steps {
-        sh "cd ${WORKSPACE}/Backend"
-        sh "npm install"
-        sh "cd ${WORKSPACE}/Frontend"
-        sh "npm install"
-        sh "cd ${WORKSPACE}/SharedUtils"
-        sh "npm install"
+        sh "cd Backend && npm install"
+        sh "cd Frontend && npm install"
+        sh "cd SharedUtils && npm install"
       }
     }
     stage('Test Backend') {
