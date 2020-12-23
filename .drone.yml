@@ -18,7 +18,7 @@ steps:
 - name: Test
   image: node:12
   environment:
-    NODE_ENV: test
+    NODE_ENV: development
     VERBOSE: true
     POSTGRES_DB: chefbook_test
     POSTGRES_USER: chefbook
@@ -26,7 +26,7 @@ steps:
     POSTGRES_PORT: 5432
     POSTGRES_HOST: postgres
     POSTGRES_SSL: false
-    POSTGRES_LOGGING: false
+    POSTGRES_LOGGING: true
     GRIP_URL: http://localhost:5561/
     GRIP_KEY: changeme
   commands:
