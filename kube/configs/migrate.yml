@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: migrate-2020-12-21
+  name: migrate-2021-02-07
 spec:
   template:
     spec:
       containers:
-      - name: migrate-2020-12-21
-        image: julianpoy/recipesage:api-v2.6.0-beta1
+      - name: migrate-2021-02-07
+        image: julianpoy/recipesage:api-v2.7.0-beta5
         command: ["npx"]
         args: ["sequelize", "db:migrate"]
         resources:
