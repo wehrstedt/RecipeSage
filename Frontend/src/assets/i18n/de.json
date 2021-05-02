@@ -1,0 +1,211 @@
+{
+  "pages.welcome.selfhostTitle": "RecipeSage Self Hosted!",
+  "pages.welcome.selfhostSubtitle": "Eine inoffizielle, selbst gehostete Version von <a href='https://recipesage.com'>RecipeSage</a>, ein kostenloses Rezeptbuch mit einem Wochenplaner für deine Gerichte und automatischer Einkaufsliste mit Zugriff über den Webbrowser und per App für IOS und Android",
+  "pages.welcome.title": "All deine Rezepte an einem Ort",
+  "pages.welcome.subtitle": "Ein kostenloses Rezeptbuch mit einem Wochenplan für deine Gerichte und automatischer Einkaufsliste mit Zugriff über den Webbrowser und per App für IOS und Android",
+  "pages.welcome.registerButton": "Registrieren",
+  "pages.welcome.loginButton": "Anmelden",
+  "pages.welcome.appDemoImageAlt": "Meine Rezepte (Vorschau)",
+
+  "pages.welcome.description.welcome": "Willkommen bei RecipeSage!",
+  "pages.welcome.description.1": "RecipeSage ist ein kostenloses (durch Spenden finanziertes) Rezeptbuch  mit einem Wochenplan für deine Gerichte und automatischer Einkaufsliste mit Zugriff über den Webbrowser und per App für IOS und Android.",
+  "pages.welcome.description.2": "Importiere Rezepte von anderen Webseiten, indem du die URL des Rezept hier einfügst. Synchronisiere deine Rezepte, deinen Essensplan und deine Einkaufslisten über all deine Geräte hinweg. Teile deine Rezepte, Einkaufslisten und Essenspläne mit deiner Familie und Freunden.",
+
+  "pages.welcome.description.features": "Welche Funktionen bietet RecipeSage?",
+  "pages.welcome.description.features.1.title": "Import per URL:",
+  "pages.welcome.description.features.1.description": "Importiere Rezepte von anderen Webseiten, indem die die URL des Rezepts hier einfügst",
+  "pages.welcome.description.features.2.title": "Umfangreiche Suche:",
+  "pages.welcome.description.features.2.description": "Durchsuche alle Felder deiner Rezepte. Die Suche erkennt Tippfehler und ähnliche Worte",
+  "pages.welcome.description.features.3.title": "Beschriftungen und Kategorisierung:",
+  "pages.welcome.description.features.3.description": "Versehe deine Rezepte mit Tags und filtere nach Tags",
+  "pages.welcome.description.features.4.title": "Drag and drop Essensplanung:",
+  "pages.welcome.description.features.4.description": "Erstelle deinen Essensplan einfach und schnell per Drag and Drop",
+  "pages.welcome.description.features.5.title": "Einkaufsliste:",
+  "pages.welcome.description.features.5.description": "Automatisch kategorisiert und intelligent gruppiert - füge deine Rezepte per Klick der Einkaufsliste hinzu. Ähnliche Waren werden automatisch gruppiert",
+  "pages.welcome.description.features.6.title": "Teilen:",
+  "pages.welcome.description.features.6.description": "Teile deine Rezepze und bearbeite zusammen mit deiner Familie und deinen Freunden Einkaufslisten und Essenspläne",
+  "pages.welcome.description.features.7.title": "Import:",
+  "pages.welcome.description.features.7.description": "Supports Pepperplate, Living Cookbook, and Paprika",
+  "pages.welcome.description.features.8.title": "Export:",
+  "pages.welcome.description.features.8.description": "Sichere deine Rezepte in verschiedenen Dateiformaten",
+
+  "pages.welcome.description.cta": "Warum RecipeSage?",
+  "pages.welcome.description.cta.1": "Kostenlos (spendenbasiert)",
+  "pages.welcome.description.cta.2": "Einfache Benutzung",
+  "pages.welcome.description.cta.3": "Verfügbar für den Desktop und auf allen Mobilgeräten",
+  "pages.welcome.description.cta.4": "Importiere Rezepte von beliebigen URLs",
+
+  "====== Pages.Auth ======": "",
+
+  "pages.auth.title.login": "Anmelden",
+  "pages.auth.title.register": "Registrieren",
+
+  "pages.auth.selfhostWarning": "Hinweis: Es handelt sich um eine selbst gehostete Version von RecipeSage. Es besteht keine Verbindung zu <a href='https://recipesage.com'>RecipeSage.com</a> und es werden keine Daten ausgetauscht.",
+
+  "pages.auth.welcome.login": "Willkommen zurück!",
+  "pages.auth.welcome.login.sub": "Melde dich mit deinen Zugangsdaten an.",
+
+  "pages.auth.welcome.register": "Willkommen!",
+  "pages.auth.welcome.register.sub1": "Wir benötigen ein paar Informationen, um deinen Account anzulegen.",
+  "pages.auth.welcome.register.sub2": "Anschließend bist du bereit um loszulegen.",
+
+  "pages.auth.input.name": "vollständiger Name oder Nickname",
+  "pages.auth.input.email": "Email",
+  "pages.auth.input.password": "Passwort",
+  "pages.auth.input.confirmPassword": "Passwort bestätigen",
+
+  "pages.auth.selfhostWarning2": "Stelle sicher, dass du den Betreiber dieser selbst gehosteten Version vertraust",
+
+  "pages.auth.button.login": "Anmelden",
+  "pages.auth.button.register": "Registrieren",
+  "pages.auth.button.forgotPassword": "Passwort vergessen",
+  "pages.auth.button.registerInstead": "Stattdessen registrieren",
+  "pages.auth.button.loginInstead": "Stattdessen anmelden",
+
+  "====== Pages.Home ======": "",
+
+  "pages.home.title.selectionMode": "{{count}} ausgewählt",
+  "pages.home.title.main": "Meine Rezepte",
+  "pages.home.title.inbox": "Eingang",
+
+  "pages.home.title.sharedAll": "Geteilte Rezepte",
+  "pages.home.title.sharedLabel": "Geteilte Labels: {{label}}",
+  "pages.home.title.sharedAll.withProfile": "{{name}}'s geteilte Rezepte",
+  "pages.home.title.sharedLabel.withProfile": "{{name}}'s geteilte Label: {{label}}",
+
+  "pages.home.search.placeholder": "Suche",
+
+  "pages.home.recipe.source": "Quelle:",
+  "pages.home.recipe.from": "Von:",
+  "pages.home.recipe.labels": "Labels:",
+  "pages.home.recipe.selected": "Ausgewählt",
+
+  "pages.home.errors.emptyCollection.title": "Diese Sammlung enthält noch keine Einträge",
+  "pages.home.errors.emptyCollection.message": "Diese Sammlung enthält noch keine Rezepte.",
+
+  "pages.home.errors.noRecipes.title": "Willkommen bei RecipeSage!",
+  "pages.home.errors.noRecipes.message1": "Hier werden deine Rezepte angezeigt.",
+  "pages.home.errors.noRecipes.message2": "Es sieht so aus als hast du noch keine Rezepte erstellt.",
+  "pages.home.errors.noRecipes.message3": "Klicke auf den + Button in der unteren rechten Ecke um ein Rezept zu erstellen!",
+  "pages.home.errors.noRecipes.message4": "Du kannst auch Rezepte importieren!",
+  "pages.home.errors.noRecipes.message5": "Benutze das Menü auf der linken Seite und gehe zu Einstellnungen -> Import",
+  "pages.home.errors.noRecipes.message6": "Du kannst das Clip Tool als Browsererweiterung installieren:",
+  "pages.home.errors.noRecipes.message7": "Für mehr Details besuche die Tips Tricks & Tutorials Seite",
+
+  "pages.home.errors.inboxEmpty.message1": "Dein Eingang ist leer.",
+  "pages.home.errors.inboxEmpty.message2": "Wenn jemand mit dir ein Rezept teilt wird es hier angezeigt!",
+
+
+  "pages.home.errors.noSearchResults.message1": "Keine Suchergebnisse.",
+  "pages.home.errors.noSearchResults.message2": "Suchergebnisse:",
+  "pages.home.errors.noSearchResults.message3": "Titel, Beschreibung, Quelle, Zutaten, Zubereitungsschritte und Notizen.",
+
+  "====== Pages.NotFound ======": "",
+
+  "pages.notfound.title": "Seite nicht gefunden",
+  "pages.notfound.error.title": "Seite nicht gefunden!",
+  "pages.notfound.error.message1" : "Es sieht so aus als ob die von dir angeforderte Seite nicht eistiert.",
+  "pages.notfound.error.message2" : "Überprüfe bitte, ob die URL korrekt ist.",
+  "pages.notfound.error.message3" : "Wenn die Hilfe brauchst oder du von der Anwendung auf diese Seite weitergeleitet wurdest, kontaktiere mich bitte.",
+  "pages.notfound.error.contact" : "Sende mir eine Nachricht",
+  "pages.notfound.error.goHome" : "Zurück zu deinen Rezepten",
+
+  "====== Pages.HomePopover ======": "",
+
+  "pages.homepopover.options": "Einstellungen",
+  "pages.homepopover.options.layout": "Layout",
+  "pages.homepopover.options.layout.tiles": "Tiles",
+  "pages.homepopover.options.layout.list": "Liste",
+  "pages.homepopover.options.showLabels": "Labels anzeigen",
+  "pages.homepopover.options.showLabelToggles": "Label-Toggles anzeigen",
+  "pages.homepopover.options.showImages": "Bilder anzeigen",
+  "pages.homepopover.options.showSource": "Quelle anzeigen",
+  "pages.homepopover.options.showRecipeDescription": "Beschreibung anzeigen",
+
+  "pages.homepopover.options.sortBy": "Sortieren nach",
+  "pages.homepopover.options.sortBy.title": "Titel",
+  "pages.homepopover.options.sortBy.createdNewest": "Erstellt (neustes zuerst)",
+  "pages.homepopover.options.sortBy.createdOldest": "Erstellt (ältestes zuerst)",
+  "pages.homepopover.options.sortBy.updatedNewest": "Aktualisiert (neustes zuerst)",
+  "pages.homepopover.options.sortBy.updatedOldest": "Aktualisiert (ältestes zuerst)",
+
+  "pages.homepopover.options.filterByLabel": "Nach Label filtern",
+  "pages.homepopover.options.matchAllLabels": "Alle Labels übereinstimmen",
+  "pages.homepopover.options.unselectAllRecipes": "Auswahl aufheben",
+  "pages.homepopover.options.selectMultipleRecipes": "Wähle mehrere Rezepte aus",
+
+  "pages.homepopover.warning.optionsHidden": "Hinweis: Einige Einstellungen sind ausgeblindet, da es eine geteilte Sammlung ist",
+
+  "====== Pages.RecipeDetails ======": "",
+
+  "pages.recipeDetails.pageTitle": "Rezept Details",
+  "pages.recipeDetails.source": "Quelle",
+  "pages.recipeDetails.activeTime": "Zubereitungszeit",
+  "pages.recipeDetails.totalTime": "Kochzeit",
+  "pages.recipeDetails.yield": "Portionen",
+
+  "pages.recipeDetails.sentBy": "{{name}} hat dir dieses Rezept geschickt",
+  "pages.recipeDetails.sentByAction": "Füge dieses Rezept zu deiner Sammlung hinzu, indem du die Schaltfläche unten anklickst.",
+
+  "pages.recipeDetails.ingredients": "Zutaten",
+  "pages.recipeDetails.noIngredients": "Keine Zutaten",
+
+  "pages.recipeDetails.scaleStatus": "{{scale}}x Portionen (Klicken zum Ändern)",
+
+  "pages.recipeDetails.instructions": "Zubereitung",
+  "pages.recipeDetails.noInstructions": "Keine Zubereitungsschritte vorhanden",
+
+  "pages.recipeDetails.notes": "Notizen",
+  "pages.recipeDetails.noNotes": "Keine Notizen",
+
+  "pages.recipeDetails.labels": "Labels",
+  "pages.recipeDetails.mustSaveBeforeLabelling": "Du kannst Labels nach dem Speichern des Rezepts hinzufügen",
+
+  "pages.recipeDetails.labels.clickToCreate": "Erstellen",
+  "pages.recipeDetails.labels.alreadyAdded": "Bereits erstellt",
+  "pages.recipeDetails.labels.clickToAdd": "Hinzufügen",
+
+  "pages.recipeDetails.created": "Erstellt",
+  "pages.recipeDetails.updated": "Zuletzt bearbeitet",
+  "pages.recipeDetails.saveToMyRecipes": "Rezept zu meiner Sammlung hinzufügen",
+  "pages.recipeDetails.delete": "Löschen",
+  "pages.recipeDetails.doesNotBelongToYou": "Dieses Rezept wurde noch nicht zu deiner Sammlung hinzugefügt.",
+  "pages.recipeDetails.requiresAccountToSave": "Erstelle einen Account oder melde dich an, um Rezepte zu deiner Sammlung hinzuzufügen.",
+  "pages.recipeDetails.registerOrLoginToSave": "Registerern/Anmelden um das Rezept zu speichern",
+
+  "pages.recipeDetails.edit": "Bearbeiten",
+  "pages.recipeDetails.delete": "Löschen",
+  "pages.recipeDetails.addToShoppingList": "Zur Einkaufsliste hinzufügen",
+  "pages.recipeDetails.addToMealPlan": "Zum Essensplan hinzufügen",
+  "pages.recipeDetails.share": "Teilen",
+  "pages.recipeDetails.print": "Drucken",
+  "pages.recipeDetails.makeACopy": "Kopieren",
+
+  "pages.recipeDetails.pinRecipe": "Rezept anheften",
+  "pages.recipeDetails.unPinRecipe": "Rezept lösen",
+
+  "====== Pages.RecipeDetailsPopover ======": "",
+
+  "pages.recipeDetailsPopover.options": "Einstellungen",
+  "pages.recipeDetailsPopover.keepScreenOn": "Bildschirm nicht ausschalten",
+  "pages.recipeDetailsPopover.actions": "Aktionen",
+  "pages.recipeDetailsPopover.addToShoppingList": "Zur Einkaufsliste hinzufügen",
+  "pages.recipeDetailsPopover.addToMealPlan": "Zum Essensplan hinzufügen",
+  "pages.recipeDetailsPopover.share": "Teilen",
+  "pages.recipeDetailsPopover.print": "Drucken",
+
+  "pages.recipeDetailsPopover.pinRecipe": "Rezept anheften",
+  "pages.recipeDetailsPopover.unPinRecipe": "Rezept lösen",
+
+  "pages.recipeDetailsPopover.edit": "Bearbeiten",
+  "pages.recipeDetailsPopover.makeACopy": "Kopieren",
+  "pages.recipeDetailsPopover.dangerZone": "Danger Zone",
+  "pages.recipeDetailsPopover.delete": "Rezept löschen",
+
+  "====== Pages.ResettableSelectPopover ======": "",
+
+  "pages.rselectpopover.resetAll": "Alle Daten löschen",
+  "pages.rselectpopover.done": "Erledigt",
+
+  "trailing.comma.placeholder": ""
+}
