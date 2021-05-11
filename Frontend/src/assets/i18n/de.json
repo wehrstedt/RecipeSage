@@ -207,5 +207,122 @@
   "pages.rselectpopover.resetAll": "Alle Daten löschen",
   "pages.rselectpopover.done": "Erledigt",
 
+  "====== Pages.About ======": "",
+
+  "pages.about.title": "Über & Support",
+  "pages.about.links.details": "Über mich & RecipeSage",
+  "pages.about.links.contact": "Kontakt",
+  "pages.about.links.contribute": "Mitwirken!",
+  "pages.about.links.tipsTricksTutorials": "Tipos, Tricks und Tutorials",
+  "pages.about.links.releaseNotes": "Versionshinweise",
+  "pages.about.links.legal": "Rechtliches, Vereinbarungen und Haftungsausschlüsse",
+  "pages.about.emailMe": "Schreibe mir eine Email an",
+  "pages.about.socialTitle": "Social Media",
+
+  "====== Pages.Contact ======": "",
+
+  "pages.contact.title": "Kontakt",
+  "pages.contact.subtitle": "Kontakt Info",
+  "pages.contact.emailMe": "Bei Fehlern, Anregungen und sonstiger Kritik schreibe mir eine Email an",
+  "pages.contact.website": "Weitere Ansprechmöglichkeiten findest du auf meiner Website oder über meine unten verlinkten Social Media Kanäle. Meine Website ist",
+  "pages.contact.socialTitle": "Social Media",
+
+  "====== Pages.Contribute ======": "",
+
+  "pages.contribute.title": "Unterstützen",
+  "pages.contribute.subtitle": "Unterstütze RecipeSage",
+  "pages.contribute.mission": "Mein Ziel ist es, RecipeSage für jeden kostenlos zur Verfügung zu stellen, ohne Werbung schalten zu müssen.",
+  "pages.contribute.purpose": "Da RecipeSage stetig wächst, steigen auch die Kosten für die Produktbilder und Betrieb.",
+  "pages.contribute.monthly": "Monatlich",
+  "pages.contribute.monthly.description": "Du kannst weitere Funktionen für den Monat freischalten, indem du RecipeSage unterstützt.",
+  "pages.contribute.oneTime": "Einmalig",
+  "pages.contribute.oneTime.description": "Du kannst weitere Funktionen für ein ganzen Jahr freischalten.",
+  "pages.contribute.custom": "Benutzerdefiniert",
+  "pages.contribute.action": "Unterstützen!",
+  "pages.contribute.tosActionTitle": "unterstützen",
+
+  "pages.contribute.bonus.title": "Als Dankeschön dafür, dass du RecipeSage unterstützt, hast du Zugriff auf die folgenden weiteren Bonusfunktionen:",
+  "pages.contribute.bonus.feature.1": "Upload von Bildern in hoher Auflösung",
+  "pages.contribute.bonus.feature.2": "Upload mehrerer Bilder pro Rezept",
+  "pages.contribute.bonus.enabled": "Aktiviert",
+
+  "pages.contribute.bonus.reason": "Bonusfunktionen sind nur für diejenigen Verfügbar, die RecipeSage unterstützen, da diese Funktionen die Betriebskosten für mich steigern.",
+
+  "pages.contribute.cta.1": "Ursprünglich habe ich RecipeSage für mich und meine Famlie entworfen, um Rezepte miteinander teilen zu können. Seitdem hat sich RecipeSage zu einem vollwertigen Open-Source-Projekt entwickelt.",
+  "pages.contribute.cta.2": "Bitte denken Sie darüber nach, einen Beitrag zu den laufenden Betriebskosten von RecipeSage zu leisten und mich zu unterstützen.",
+
+
+  "====== Pages.ContributeThankYou ======": "",
+
+  "pages.contributeThankYou.title": "Vielen Dank!",
+  "pages.contributeThankYou.thanks": "Danke dass du ein Teil der RecipeSage Familie bist und dazu beiträgst, RecipeSage am laufen zu halten!",
+  "pages.contributeThankYou.bonus": "Die Bonusfunktionen werden in Kürze in deinem Konto freigeschaltet.",
+  "pages.contributeThankYou.questions": "Du kannst mich jederzeit kontaktieren, wenn du Fragen oder Anregungen hast.",
+
+  "====== Pages.ContributeCancel ======": "",
+
+  "pages.contributeCancel.title": "Wir brauchen deine Unterstützung!",
+  "pages.contributeCancel.cta.1": "RecipeSage ist auf Spenden angewiesen - jede Spende hilft!",
+  "pages.contributeCancel.cta.2": "Leider bekommt RecipeSage nicht viele Spenden, da es eine recht kleine Plattform ist.",
+  "pages.contributeCancel.cta.3": "Um RecipeSage weiterhin kostenlos anbieten zu können und gleichzeitig die Serverkosten zu decken, brauchen wir deine Hilfe.",
+  "pages.contributeCancel.cta.4": "Bitte überlegen Sie es sich noch einmal - Ihr Beitrag ist wirklich wichtig!",
+  "pages.contributeCancel.contribute": "Unterstützen",
+
+  "====== Pages.DownloadAndInstall ======": "",
+
+  "pages.downloadAndInstall.title": "Downloads & Installieren",
+  "pages.downloadAndInstall.subtitle": "Wähle eine Plattform",
+  "pages.downloadAndInstall.done": "Wenn du bestätigst, wird RecipeSage als App auf deinem Gerät installiert.",
+
+  "pages.downloadAndInstall.thisDevice": "Dieses Gerät",
+
+  "pages.downloadAndInstall.android.title": "Android Smartphone oder Tablet",
+  "pages.downloadAndInstall.android.instructionHeader": "RecipeSage installieren:",
+  "pages.downloadAndInstall.android.step.1": "Öffne RecipeSage in Chrome",
+  "pages.downloadAndInstall.android.step.2": "Öffne das Kontextmenü durch Klick auf die drei Punkte:",
+  "pages.downloadAndInstall.android.step.3": "Wähle \"Zum Startbildschirm hinzufügen\"",
+
+  "pages.downloadAndInstall.ios.title": "Apple Smartphone",
+  "pages.downloadAndInstall.ios.instructionHeader": "RecipeSage installieren:",
+  "pages.downloadAndInstall.ios.step.1": "Öffne Safari",
+  "pages.downloadAndInstall.ios.step.2": "Klicke auf Teilen:",
+  "pages.downloadAndInstall.ios.step.3": "Wähle \"Zum Startbildschirm hinzufügen\"",
+
+  "pages.downloadAndInstall.desktop.title": "Desktop oder Laptop",
+  "pages.downloadAndInstall.desktop.instructionHeader": "RecipeSage installieren:",
+  "pages.downloadAndInstall.desktop.step.1": "Öffne RecipeSage in Google Chrome",
+  "pages.downloadAndInstall.desktop.step.2": "Öffne das Kontextmenü durch Klick auf die drei Punkte:",
+  "pages.downloadAndInstall.desktop.step.3": "Wähle \"RecipeSage installieren...\"",
+
+  "====== Pages.LabelsPopover ======": "",
+
+  "pages.labelsPopover.title": "Optionen",
+  "pages.labelsPopover.options.showCreatedAt": "Erstellt am Anzeigen",
+  "pages.labelsPopover.options.selectMultipleLabels": "Mehrfachauswahl",
+  "pages.labelsPopover.options.unselectLabels": "Auswahl aufheben",
+
+  "====== Pages.Labels ======": "",
+
+  "pages.labels.title": "Meine Labels verwalten",
+  "pages.labels.selectionModeTitle": "{{count}} ausgewählt",
+  "pages.labels.subtitle": "Du hast {{count}} Labels erstellt. Wähle ein Label aus, dass du bearbeiten möchtest.",
+  "pages.labels.label.recipeCount": "{{count}} Rezepte",
+  "pages.labels.label.createdAt": "Erstellt am {{dateString}}",
+  "pages.labels.label.selected": "Ausgewählt",
+
+  "pages.labels.nullState.1": "Du hast noch keine Labels erstellt.",
+  "pages.labels.nullState.2": "Labels können in der Detailansicht eines Rezeptes erstellt werden.",
+  "pages.labels.nullState.3": "Labels werden gespeichert, solange diese noch mit mindestens einem Rezept verknüpft sind.",
+
+  "====== Pages.ManageLabelModal ======": "",
+
+  "pages.manageLabelModal.title": "Label bearbeiten: {{name}}",
+  "pages.manageLabelModal.recipeCount": "Verwendet in {{count}} Rezepten",
+  "pages.manageLabelModal.createdAt": "Erstellt am: {{dateString}}",
+  "pages.manageLabelModal.warning": "Achtung: Diese Aktionen können nicht rückgängig gemacht werden",
+  "pages.manageLabelModal.rename": "Umbenennen",
+  "pages.manageLabelModal.merge": "Mit einem anderen Label zusammenfügen",
+  "pages.manageLabelModal.delete": "Löschen",
+
   "trailing.comma.placeholder": ""
 }
